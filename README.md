@@ -16,3 +16,6 @@ Ao final do curso, o conhecimento adquirido contribui para:
   *Desenvolvimento do raciocínio lógico e da capacidade de resolução de problemas
   *Experiência prática com desenvolvimento de aplicações desktop
   *Criação de projetos relevantes para portfólio
+
+link para acessar o curso:
+https://www.udemy.com/course/learn-python-by-creating-10-apps/?couponCode=KEEPLEARNINGBR

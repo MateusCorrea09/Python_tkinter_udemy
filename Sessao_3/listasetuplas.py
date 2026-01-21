@@ -87,3 +87,58 @@ print('Aqui seria de trás para frente acessando 1 índice e pula outro índice'
 print(f'{numeros}\nTeste {numeros[::-2]}')
 print('Aqui seria de trás para frente acessando 1 índice e pula dois índices')
 print(f'{numeros}\nTeste {numeros[::-3]}')
+
+##  Outra aula sobre 'unpacking', seria uma forma de manipular os dados de uma lista ou tupla
+#pelo que eu entendi são formas de passar dados de variaveis para uma tupla ou o inverso
+print('\n')
+a, b = (10, 5) #Aqui estamos pegando duas variaveis e separando para cada uma receber um valor da tupla
+print(a,b,sep='\n') #Resultado esperado a = 10 b = 5
+#   Importante dizer que isso só funciona se os valores dentro da lista ou tupla forem passados
+# para o mesmo número de variaveis que estão recebendo os dados, isso siginifica que se uma tupla tiver
+# 3 dados diferentes devem ter 3 vairaveis para receber cada um, caso contrario o python vai comunicar
+# uma mensagem de erro informando que não há variaveis o suficiente para receber o número de dados da
+# lista ou tupla. 
+variavel_1 = 10
+variavel_2 = 'teste'
+print('Trocando as variaveis')
+variavel_1,variavel_2 = variavel_2, variavel_1
+print(variavel_1)
+
+##Outra aula sobre a similaridade entre strings, listas e tuplas
+print('\n')
+teste_string = 'this is a teste' #:D
+teste_lista = [1,2,3,4,5,6,7,8]
+
+#   Existem algumas formas de manipular ums string a transformando em uma tupla ou lista, por exemplo
+#podemos usar um método chamado .split() e desa forma separar uma string com basse em um parâmetro
+#passado no argumento. Se deixarmos vazio o sistema entende que precisa separar por espaços
+print(teste_string.split()) #Aqui será separado por espaços
+print(teste_string.split('t')) #Aqui ele considerou todo 't' um momento de quebra na string
+print(list(teste_string)) #Aqui aparentemente acontece uma conversão de string para lista
+
+#   A conversão gira em torno de passar para uma nova variavel o conteúdo dentro da lista, tupla ou
+# string. 
+print('\n Convertendo uma string em lista')
+nova_lista_de_string = list(teste_string)
+print(type(nova_lista_de_string), nova_lista_de_string,sep='\n')
+print('\nConvertendo uma string em tupla')
+nova_tupla_de_string = tuple(teste_string)
+print(type(nova_tupla_de_string), nova_tupla_de_string,sep='\n')
+
+#   Existe outra forma de juntar elementos de uma lista em uma string, usando o .join('lista')
+#Essa parte o jois esta usando o '' como forma de parâmetro para pegar a string que esta sendo
+# passada no argumento, e subistituir todos os 'sep' por esse '' e passando no print
+print('\n juntando tuplas e listas dentro de uma string')
+print(''.join(['one','two','three','four']))
+print('-separador-'.join(['one','two','three','four']))
+nova_string = ''.join(['um','dois','três'])
+print(nova_string, type(nova_string))
+
+print('\n')
+#EXERCÍCIO remova todas as ',' da lista de números
+#importante dizer que a lista é composta de numbers, isso siginfica que o jois vai falhar :D
+#por isso devemos transformalá em uma string e depois usar o método da string .split() e retirar
+#as ','
+#   Eu vi a resolução e o professor usou o '.strip()' porque aparentemente ele permite vc usar
+# multiplos, diferente do 'split()', ele não permite vc colcoar um seguido do outro :D 
+print(''.join(str(teste_lista).strip('[').strip(']').split(',')))
